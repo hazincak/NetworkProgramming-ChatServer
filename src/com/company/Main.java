@@ -1,5 +1,7 @@
 package com.company;
 
+import java.io.IOException;
+import java.net.ServerSocket;
 import java.util.Scanner;
 
 public class Main {
@@ -10,8 +12,13 @@ public class Main {
         menuChoice = menu();
         if(menuChoice != 0){
             portNumber = portNumber();
-            System.out.println(portNumber
-            );
+            try (ServerSocket serverSocket = new ServerSocket(portNumber)){
+                while(true){
+                    new Messenger(serverSocket.accept()).start();
+                }
+            }catch (IOException e){
+                System.out.println("Server error " + e.getMessage());
+            }
         }
     }
 
