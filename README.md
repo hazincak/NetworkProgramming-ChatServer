@@ -1,7 +1,7 @@
 # NetworkProgramming-ChatServer
 
 ## Description
-This project is part of a simple network-based chat application
+This project is part of a simple network-based chat application.
 
 ## Server description
 
