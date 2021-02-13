@@ -15,4 +15,10 @@ Each new incoming connection represented by new client creates new ClientThread 
 
 
 ## How to run
-
+1.	Enter *ChatServer* folder and navigate into java file directory with following command:
+```cd src/ie/gmit/dip```
+2. Compile all files:
+```javac Main.java ServerEchoer.java ```
+3. Type *ls* command (Windows PowerShell or Git Bash) or *dir* command (Command Prompt) to make sure that you have all your compiled files ending with .class
+4. Go three levels up to *src* directory and execute following command to run the server:
+```java ie.gmit.dip.Main```
